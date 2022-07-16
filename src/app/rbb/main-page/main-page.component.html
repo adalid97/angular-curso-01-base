@@ -1,0 +1,23 @@
+<h1>Real Betis Balompié</h1>
+<hr>
+
+<div class="row">
+
+    <div class="col">
+        <h3>Jugadores</h3>
+        <hr>
+        <ul>
+            <li *ngFor="let jugador of jugadores">{{jugador.nombre}} - {{jugador.posicion}}</li>
+        </ul>
+    </div>
+    <div class="col">
+        <h3>Agregar <small>{{nuevo.nombre}} - {{nuevo.posicion}}</small></h3>
+        <hr>
+        <form (ngSubmit)="agregar(nuevo)">
+            <!-- <input type="text" placeholder="Nombre" [value]="nuevo.nombre"> -->
+            <input type="text" placeholder="Nombre" name="nombre" [(ngModel)]="nuevo.nombre">
+            <input type="text" placeholder="Posición" name="posicion" [(ngModel)]="nuevo.posicion">
+            <button type="submit">Agregar</button>
+        </form>
+    </div>
+</div>

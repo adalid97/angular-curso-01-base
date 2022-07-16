@@ -16,7 +16,4 @@ import { CommonModule } from "@angular/common";
         CommonModule
     ]
 })
-export class HeroesModule {
-
-
-}
+export class HeroesModule {}
